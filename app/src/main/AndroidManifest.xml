@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appet">
         <activity
+            android:name=".infoMascota"
+            android:exported="true" />
+        <activity
+            android:name=".detallesProducto"
+            android:exported="true" />
+        <activity
+            android:name=".agregarProducto"
+            android:exported="true" />
+        <activity
             android:name=".registro"
             android:exported="true" />
         <activity
