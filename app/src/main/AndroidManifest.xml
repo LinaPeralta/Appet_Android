@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appet">
         <activity
+            android:name=".registro"
+            android:exported="true" />
+        <activity
+            android:name=".signup"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
