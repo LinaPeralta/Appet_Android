@@ -33,13 +33,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:fontFamily="@font/book"
-        android:hint="Usuario"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
@@ -76,10 +76,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/password" />
+        app:layout_constraintTop_toTopOf="@+id/passwordTxt" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -91,6 +91,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
