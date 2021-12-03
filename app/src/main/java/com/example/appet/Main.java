@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Main extends AppCompatActivity {
 
-    private Button addPetBtn, addProBtn;
+    private Button addPetBtn, addProBtn, logOutBtn;
     private FirebaseAuth auth;
 
     @Override
@@ -21,6 +21,7 @@ public class Main extends AppCompatActivity {
         //Elements
         addPetBtn = findViewById(R.id.addPetBtn);
         addProBtn = findViewById(R.id.addProBtn);
+        logOutBtn = findViewById(R.id.logOutBtn);
 
         //Firebase
         auth = FirebaseAuth.getInstance();
@@ -31,6 +32,12 @@ public class Main extends AppCompatActivity {
         addProBtn.setOnClickListener((v)->{
             Intent addProduct = new Intent(this, ProductInfo.class);
             startActivity(addProduct);
+        });
+
+        logOutBtn.setOnClickListener((v)->{
+            auth.signOut();
+            goToLogin();
+            finish();
         });
     }
 
