@@ -34,6 +34,11 @@ public class Main extends AppCompatActivity {
             startActivity(addProduct);
         });
 
+        addPetBtn.setOnClickListener((v)->{
+            Intent addPet = new Intent(this, RegisterPet.class);
+            startActivity(addPet);
+        });
+
         logOutBtn.setOnClickListener((v)->{
             auth.signOut();
             goToLogin();
