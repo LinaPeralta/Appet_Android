@@ -7,7 +7,7 @@
     tools:context=".ProductInfo">
 
     <EditText
-        android:id="@+id/username11"
+        android:id="@+id/productName"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="69dp"
@@ -24,10 +24,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/username12"
+        android:id="@+id/amountTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:fontFamily="@font/book"
         android:hint="Cantidad del producto"
@@ -36,15 +36,15 @@
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username11" />
+        app:layout_constraintTop_toBottomOf="@+id/gramsCheck" />
 
     <EditText
-        android:id="@+id/username13"
+        android:id="@+id/useTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:fontFamily="@font/book"
         android:hint="Gasto diario del producto"
@@ -53,15 +53,15 @@
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username12" />
+        app:layout_constraintTop_toBottomOf="@+id/amountTxt" />
 
     <Button
-        android:id="@+id/ingresarBtn5"
+        android:id="@+id/registerBtn"
         android:layout_width="258dp"
         android:layout_height="56dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button"
         android:fontFamily="@font/book"
         android:hint="Registrar"
@@ -70,7 +70,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username13" />
+        app:layout_constraintTop_toBottomOf="@+id/useTxt" />
 
     <TextView
         android:id="@+id/textView5"
@@ -96,4 +96,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/responsive" />
+
+    <CheckBox
+        android:id="@+id/unitsCheck"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="56dp"
+        android:text="Unidades"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <CheckBox
+        android:id="@+id/gramsCheck"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:text="Gramos"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

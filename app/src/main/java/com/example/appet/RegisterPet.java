@@ -3,6 +3,7 @@ package com.example.appet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +16,6 @@ import java.util.UUID;
 public class RegisterPet extends AppCompatActivity {
 
     private FirebaseDatabase db;
-
     private EditText petnameTxt,edadTxt,animalTxt,razaTxt,nacimientoTxt,condicionTxt;
     private Button registrarBtn;
     private String userID;
@@ -35,9 +35,6 @@ public class RegisterPet extends AppCompatActivity {
 
         db = FirebaseDatabase.getInstance();
 
-        Intent registerScreen = getIntent();
-        userID = registerScreen.getStringExtra("userKey");
-
         registrarBtn.setOnClickListener(
                 (v) -> {
                     registrarMascota();
@@ -45,6 +42,14 @@ public class RegisterPet extends AppCompatActivity {
                     startActivity(intent);
                 });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Get id from shared preferences
+        SharedPreferences data = getSharedPreferences("data", MODE_PRIVATE);
+        userID = data.getString("userID", "null");
     }
 
     public void registrarMascota(){

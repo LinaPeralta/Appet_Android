@@ -3,6 +3,7 @@ package com.example.appet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,8 @@ public class Signup extends AppCompatActivity {
 
         db = FirebaseDatabase.getInstance();
 
+        //Shared preference to put the user id in
+        SharedPreferences data = getSharedPreferences("data", MODE_PRIVATE);
 
         ingresarBtn2.setOnClickListener(
                 (v) -> {
@@ -47,9 +50,9 @@ public class Signup extends AppCompatActivity {
                     );
                     newUser.setValue(usuario);
 
-                    //Switch screens and send id
+                    //Switch screens and share id
                     Intent signup = new Intent( this, RegisterPet.class);
-                    signup.putExtra("userKey", usuario.getId());
+                    data.edit().putString("userID", id).apply();
                     startActivity(signup);
                 });
     }
