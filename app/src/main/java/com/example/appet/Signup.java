@@ -46,12 +46,12 @@ public class Signup extends AppCompatActivity {
         public void registrarUsuario(){
 
             String id = UUID.randomUUID().toString();
-            DatabaseReference newUser = db.getReference().child("users").child(id).push();
+            DatabaseReference newUser = db.getReference().child("users").child(id);
 
             User usuario = new User(
 
-                    id,
                     correoTxt.getText().toString(),
+                    id,
                     apellidoTxt.getText().toString(),
                     nombreTxt.getText().toString(),
                     contraTxt.getText().toString()
