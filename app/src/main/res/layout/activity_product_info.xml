@@ -15,6 +15,7 @@
         android:fontFamily="@font/book"
         android:hint="Nombre del producto"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,6 +32,7 @@
         android:fontFamily="@font/book"
         android:hint="Cantidad del producto"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,6 +49,7 @@
         android:fontFamily="@font/book"
         android:hint="Gasto diario del producto"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,51 +57,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username12" />
 
-    <EditText
-        android:id="@+id/password9"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:hint="Fecha de vencimiento*"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username13" />
-
-    <EditText
-        android:id="@+id/password10"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:hint="Fecha de compra*"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password9" />
-
     <Button
         android:id="@+id/ingresarBtn5"
-        android:layout_width="166dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="258dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/button"
         android:fontFamily="@font/book"
         android:hint="Registrar"
         android:textAllCaps="false"
         android:textColorHint="#1C477F"
-        android:textSize="16dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password10" />
+        app:layout_constraintTop_toBottomOf="@+id/username13" />
 
     <TextView
         android:id="@+id/textView5"
