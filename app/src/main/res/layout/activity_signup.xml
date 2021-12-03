@@ -33,39 +33,57 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password2"
+        android:id="@+id/nombreTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="552dp"
         android:ems="10"
+        android:fontFamily="@font/book"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        android:hint="Contraseña"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username2" />
+        app:layout_constraintTop_toTopOf="@+id/background2" />
 
-    <TextView
-        android:id="@+id/registrarseTxt2"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/correoTxt"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
         android:fontFamily="@font/book"
-
-        android:text="¿Ya tienes cuenta? Inicia sesión"
-        android:textColor="#1C477F"
+        android:hint="Correo"
+        android:inputType="textPersonName"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingresarBtn2" />
+        app:layout_constraintTop_toTopOf="@+id/background2" />
+
+    <EditText
+        android:id="@+id/contraTxt"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPersonName"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidoTxt" />
 
     <Button
         android:id="@+id/ingresarBtn2"
         android:layout_width="166dp"
         android:layout_height="31dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/button"
         android:fontFamily="@font/book"
         android:text="Ingresar"
@@ -75,49 +93,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2" />
+        app:layout_constraintTop_toBottomOf="@+id/contraTxt" />
 
-    <EditText
-        android:id="@+id/username2"
-        android:layout_width="330dp"
+    <TextView
+        android:id="@+id/backloginBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/book"
-        android:inputType="textPersonName"
-        android:hint="Usuario"
-        android:textColorHint="#1C477F"
-        android:textSize="16dp"
+
+        android:text="¿Ya tienes cuenta? Inicia sesión"
+        android:textColor="#1C477F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username5" />
+        app:layout_constraintTop_toBottomOf="@+id/ingresarBtn2" />
 
     <EditText
-        android:id="@+id/username4"
+        android:id="@+id/apellidoTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="608dp"
         android:ems="10"
         android:fontFamily="@font/book"
-        android:inputType="textPersonName"
-        android:hint="Nombre"
-        android:textColorHint="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/background2" />
-
-    <EditText
-        android:id="@+id/username5"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="540dp"
-        android:ems="10"
-        android:fontFamily="@font/book"
-        android:inputType="textPersonName"
         android:hint="Apellido"
+        android:inputType="textPersonName"
         android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
