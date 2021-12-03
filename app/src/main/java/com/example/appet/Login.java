@@ -15,7 +15,7 @@ public class Login extends AppCompatActivity {
 
     private EditText emailTxt, passwordTxt;
     private TextView registerTxt;
-    private Button loginBtn;
+    private Button ingresarBtn;
     private FirebaseAuth auth;
 
     @Override
@@ -29,15 +29,15 @@ public class Login extends AppCompatActivity {
         //Elements
         emailTxt = findViewById(R.id.emailTxt);
         passwordTxt = findViewById(R.id.passwordTxt);
-        loginBtn = findViewById(R.id.ingresarBtn);
+        ingresarBtn = findViewById(R.id.ingresarBtn);
         registerTxt = findViewById(R.id.registrarseTxt);
 
         //Button to sign in
-        loginBtn.setOnClickListener((v)->{
+        ingresarBtn.setOnClickListener((v)->{
             auth.signInWithEmailAndPassword(emailTxt.getText().toString(), passwordTxt.getText().toString())
                     .addOnCompleteListener((authTask) -> {
                         if (authTask.isSuccessful()){
-                            Intent main = new Intent( this, Main.class);
+                            Intent main = new Intent( this, RegisterPet.class);
                             startActivity(main);
                             finish();
                         } else {
@@ -45,6 +45,7 @@ public class Login extends AppCompatActivity {
                         }
                     });
         });
+
 
         registerTxt.setOnClickListener((v)->{
             Intent signup = new Intent( this, Signup.class);
