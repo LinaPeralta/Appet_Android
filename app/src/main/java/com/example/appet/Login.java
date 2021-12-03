@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
             auth.signInWithEmailAndPassword(emailTxt.getText().toString(), passwordTxt.getText().toString())
                     .addOnCompleteListener((authTask) -> {
                         if (authTask.isSuccessful()){
-                            Intent main = new Intent( this, RegisterPet.class);
+                            Intent main = new Intent( this, Main.class);
                             startActivity(main);
                             finish();
                         } else {

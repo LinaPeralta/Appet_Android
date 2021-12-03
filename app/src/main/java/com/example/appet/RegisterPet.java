@@ -18,6 +18,7 @@ public class RegisterPet extends AppCompatActivity {
 
     private EditText petnameTxt,edadTxt,animalTxt,razaTxt,nacimientoTxt,condicionTxt;
     private Button registrarBtn;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +35,32 @@ public class RegisterPet extends AppCompatActivity {
 
         db = FirebaseDatabase.getInstance();
 
+        Intent registerScreen = getIntent();
+        userID = registerScreen.getStringExtra("userKey");
+
         registrarBtn.setOnClickListener(
                 (v) -> {
                     registrarMascota();
-                    Intent intent = new Intent( this, ProductInfo.class);
+                    Intent intent = new Intent( this, Main.class);
                     startActivity(intent);
                 });
 
     }
 
     public void registrarMascota(){
+        DatabaseReference newPet = db.getReference("users/" + userID + "/pets");
+        DatabaseReference petRef = newPet.push();
 
-        String id = UUID.randomUUID().toString();
-        DatabaseReference newUser = db.getReference().child("users").child("pets");
-
-        Pets mascotas = new Pets(
-
+        Pets mascota = new Pets(
                 edadTxt.getText().toString(),
                 animalTxt.getText().toString(),
                 razaTxt.getText().toString(),
                 nacimientoTxt.getText().toString(),
                 condicionTxt.getText().toString(),
-                id,
+                petRef.getKey(),
                 petnameTxt.getText().toString()
         );
 
-        newUser.setValue(mascotas);
-
+        petRef.setValue(mascota);
     }
 }

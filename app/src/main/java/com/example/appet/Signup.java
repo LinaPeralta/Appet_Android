@@ -30,34 +30,27 @@ public class Signup extends AppCompatActivity {
         contraTxt = findViewById(R.id.contraTxt);
         correoTxt= findViewById(R.id.correoTxt);
 
-
         db = FirebaseDatabase.getInstance();
+
 
         ingresarBtn2.setOnClickListener(
                 (v) -> {
-                    registrarUsuario();
+                    //Add user to database
+                    String id = UUID.randomUUID().toString();
+                    DatabaseReference newUser = db.getReference().child("users").child(id);
+                    User usuario = new User(
+                            correoTxt.getText().toString(),
+                            id,
+                            apellidoTxt.getText().toString(),
+                            nombreTxt.getText().toString(),
+                            contraTxt.getText().toString()
+                    );
+                    newUser.setValue(usuario);
+
+                    //Switch screens and send id
                     Intent signup = new Intent( this, RegisterPet.class);
+                    signup.putExtra("userKey", usuario.getId());
                     startActivity(signup);
                 });
-
-
     }
-
-        public void registrarUsuario(){
-
-            String id = UUID.randomUUID().toString();
-            DatabaseReference newUser = db.getReference().child("users").child(id);
-
-            User usuario = new User(
-
-                    correoTxt.getText().toString(),
-                    id,
-                    apellidoTxt.getText().toString(),
-                    nombreTxt.getText().toString(),
-                    contraTxt.getText().toString()
-            );
-
-            newUser.setValue(usuario);
-
-     }
 }
