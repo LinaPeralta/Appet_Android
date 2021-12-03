@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.appet">
+    package="com.example.appet" >
 
     <application
         android:allowBackup="true"
@@ -8,25 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Appet">
+        android:theme="@style/Theme.Appet" >
         <activity
-            android:name=".infoMascota"
+            android:name=".Main"
             android:exported="true" />
         <activity
-            android:name=".detallesProducto"
+            android:name=".PetInfo"
             android:exported="true" />
         <activity
-            android:name=".agregarProducto"
+            android:name=".ProductInfo"
             android:exported="true" />
         <activity
-            android:name=".registro"
+            android:name=".RegisterPet"
             android:exported="true" />
         <activity
-            android:name=".signup"
+            android:name=".Signup"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".Login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

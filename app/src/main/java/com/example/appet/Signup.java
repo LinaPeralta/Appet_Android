@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     private Button ingresarBtn2;
 
@@ -19,7 +19,7 @@ public class signup extends AppCompatActivity {
 
         ingresarBtn2.setOnClickListener(
                 (v) -> {
-                    Intent signup = new Intent( this, registro.class);
+                    Intent signup = new Intent( this, RegisterPet.class);
                     startActivity(signup);
                 });
 
