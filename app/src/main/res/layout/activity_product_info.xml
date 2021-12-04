@@ -27,7 +27,7 @@
         android:id="@+id/amountTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:fontFamily="@font/book"
         android:hint="Cantidad del producto"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gramsCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
 
     <EditText
         android:id="@+id/useTxt"

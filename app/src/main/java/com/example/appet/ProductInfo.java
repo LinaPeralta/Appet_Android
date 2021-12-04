@@ -110,7 +110,7 @@ public class ProductInfo extends AppCompatActivity {
     private void getDate(){
         //Get date information for when added
         date = new Date();
-        formatter = new SimpleDateFormat("MM/dd/yyyy");
+        formatter = new SimpleDateFormat("MM/d/yyyy");
         finalDate = formatter.format(date);
     }
 

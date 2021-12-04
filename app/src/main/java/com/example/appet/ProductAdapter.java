@@ -80,15 +80,14 @@ public class ProductAdapter extends ArrayAdapter {
 
         if (dateFormat.equals(product.getDateBtnClick())){
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     private void calculateDays(Product product){
         //Todays date
         Date today = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/d/yyyy");
         String todayFormat = formatter.format(today);
 
         //Product date (registered)
@@ -97,6 +96,11 @@ public class ProductAdapter extends ArrayAdapter {
         //Calculate time differences of dates
         long timeDif = today.getTime() - proDate.getTime();
         int daysCal = (int) (timeDif/(1000*3600*24));
+
+        int calculation = product.getDays()-daysCal;
+
+        Toast.makeText(this.getContext(), "" + daysCal, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getContext(), "" + calculation, Toast.LENGTH_SHORT).show();
 
         //Calculate amount left
         int amountLeft = product.getAmount() - (product.getUse()*daysCal);
