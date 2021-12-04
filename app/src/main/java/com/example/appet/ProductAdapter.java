@@ -73,13 +73,16 @@ public class ProductAdapter extends ArrayAdapter {
     }
 
     private boolean checkDates(Product product){
+        //Todays date
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/d/yyyy");
         String dateFormat = formatter.format(date);
+
         if (dateFormat.equals(product.getDateBtnClick())){
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     private void calculateDays(Product product){
