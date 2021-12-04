@@ -59,6 +59,7 @@ public class ProductInfo extends AppCompatActivity {
 
                 //Calculate days
                 int daysCalculated = amount/use;
+                String days = String.valueOf(daysCalculated);
 
                 getDate();
 
