@@ -1,12 +1,15 @@
 package com.example.appet;
 
+import androidx.annotation.NonNull;
+
 public class Product {
 
     private int amount, use, days;
     private String name, measurement, id, date, dateBtnClick;
     private boolean button;
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(int amount, int use, int days, String name, String measurement, String id, String date, String dateBtnClick, boolean button) {
         this.amount = amount;
