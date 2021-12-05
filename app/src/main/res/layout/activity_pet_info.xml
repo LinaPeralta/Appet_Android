@@ -58,8 +58,8 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/petBreed"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -73,8 +73,8 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toEndOf="@+id/petBirth"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -96,30 +96,33 @@
         android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="464dp"
+        android:layout_marginEnd="276dp"
         android:fontFamily="@font/book"
         android:hint="tipo"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.249"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/petType"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
         android:layout_marginTop="600dp"
+        android:layout_marginEnd="176dp"
         android:fontFamily="@font/book"
         android:hint="condiciones"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/petConditions"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
