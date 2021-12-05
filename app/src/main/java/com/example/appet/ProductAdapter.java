@@ -33,12 +33,14 @@ public class ProductAdapter extends ArrayAdapter {
         Button refreshBtn = convertView.findViewById(R.id.refreshBtn);
         TextView productRow = convertView.findViewById(R.id.productRow);
         TextView unidadesRow = convertView.findViewById(R.id.unidadesRow);
+        TextView tipoRow = convertView.findViewById(R.id.tipoRow);
         TextView fechaRow = convertView.findViewById(R.id.fechaRow);
         TextView diasRow = convertView.findViewById(R.id.diasRow);
 
 
         productRow.setText(producto.getName());
         unidadesRow.setText(Integer.toString(producto.getAmount()));
+        tipoRow.setText(producto.getMeasurement());
         fechaRow.setText(producto.getDate());
         diasRow.setText(Integer.toString(producto.getDays()));
 

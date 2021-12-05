@@ -15,7 +15,8 @@
         <entry key="app/src/main/res/layout/activity_registerpet.xml" value="0.19572368421052633" />
         <entry key="app/src/main/res/layout/activity_registro.xml" value="0.17763157894736842" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.18741211392453022" />
-        <entry key="app/src/main/res/layout/row.xml" value="0.18651315789473685" />
+        <entry key="app/src/main/res/layout/row.xml" value="0.2795946913403834" />
+        <entry key="app/src/main/res/layout/rowpets.xml" value="0.1864754098360656" />
       </map>
     </option>
   </component>

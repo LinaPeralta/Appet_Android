@@ -26,8 +26,9 @@ public class Main extends AppCompatActivity {
     private Button addPetBtn, addProBtn, logOutBtn;
     private ListView petList, productList;
     private ArrayList<Product> dataProduct;
-  //  private ArrayAdapter<Product> adapter;
+    private ArrayList<Pets> dataPets;
     private ProductAdapter newadapter;
+    private PetsAdapter petadapter;
     private FirebaseAuth auth;
     private FirebaseDatabase db;
     private String userID;
@@ -47,17 +48,20 @@ public class Main extends AppCompatActivity {
 
         //items
         dataProduct = new ArrayList<>();
+        dataPets = new ArrayList<>();
         newadapter = new ProductAdapter(this, dataProduct);
+        petadapter = new PetsAdapter(this, dataPets);
         productList.setAdapter(newadapter);
+        petList.setAdapter(petadapter);
 
         //Firebase
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
 
         loadUserInfo();
-       // loadDatabase();
 
-       getProducts();
+        getProducts();
+        getPets();
 
 
         //Button functions
@@ -90,7 +94,40 @@ public class Main extends AppCompatActivity {
 
     }
 
+    //lista mascotas
 
+    public void getPets(){
+        DatabaseReference ref = db.getReference("users/" +userID+ "/pets");
+
+        ref.addValueEventListener (new ValueEventListener(){
+            @Override
+            public void onDataChange (@NonNull DataSnapshot pets) {
+                actualizarListaPets(pets);
+                System.out.println("snapshot: "+ pets);
+            }
+
+            @Override
+            public void onCancelled (@NonNull DatabaseError error) {
+                Log.d("FirebaseError", error.getDetails());
+            }
+        });
+    }
+
+    public void actualizarListaPets(DataSnapshot pets) {
+
+        this.dataPets.clear();
+
+        for (DataSnapshot snapshot: pets.getChildren()) {
+            Pets mascota = snapshot.getValue(Pets.class);
+            this.dataPets.add(mascota);
+        }
+        petadapter.notifyDataSetChanged();
+
+    }
+
+
+
+    //lista productos
 
     public void getProducts(){
         DatabaseReference ref = db.getReference("users/" +userID+ "/products");
@@ -108,8 +145,6 @@ public class Main extends AppCompatActivity {
                 }
                 });
             }
-
-
 
 
     public void actualizarLista(DataSnapshot products) {

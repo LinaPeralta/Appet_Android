@@ -12,6 +12,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textSize="20dp"
+        android:fontFamily="@font/bold"
         android:textColor="#1C477F"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,10 +22,12 @@
         android:id="@+id/unidadesRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="18dp"
-        android:textColor="#1C477F"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/book"
         android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productRow" />
 
@@ -32,9 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/book"
         android:text="TextView"
-        android:textColor="#1C477F"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/unidadesRow" />
 
@@ -43,8 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/book"
         android:text="Días restantes:"
         android:textColor="#1C477F"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,31 +61,49 @@
         android:id="@+id/diasRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/bold"
         android:text="TextView"
-        android:textColor="#1C477F"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/refreshBtn" />
+        android:textColor="#6A453B"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/dias"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/refreshBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="48dp"
-        android:text="Refresh"
+        android:backgroundTint="#FFFFFF"
+        android:drawableBottom="@drawable/refresh3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider"
-        android:layout_width="409dp"
+        android:layout_width="200dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:background="?android:attr/listDivider"
-        android:backgroundTint="#131F60"
+        android:backgroundTint="#8C8C8C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tipoRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="61dp"
+        android:fontFamily="@font/book"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/unidadesRow"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
