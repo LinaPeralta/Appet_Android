@@ -85,7 +85,7 @@
     <Button
         android:id="@+id/ingresarBtn2"
         android:layout_width="166dp"
-        android:layout_height="31dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/button"
         android:fontFamily="@font/book"

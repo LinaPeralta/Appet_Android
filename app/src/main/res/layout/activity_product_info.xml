@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ProductInfo">
 
     <EditText
@@ -59,7 +60,7 @@
 
     <Button
         android:id="@+id/registerBtn"
-        android:layout_width="258dp"
+        android:layout_width="166dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/button"
@@ -104,6 +105,8 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="56dp"
         android:text="Unidades"
+        android:fontFamily="@font/book"
+        android:textColor="#1C477F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productName" />
@@ -114,7 +117,9 @@
         android:layout_height="56dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="@font/book"
         android:text="Gramos"
+        android:textColor="#1C477F"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productName" />

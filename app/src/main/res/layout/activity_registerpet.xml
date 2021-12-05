@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".RegisterPet">
 
     <ImageView
@@ -21,42 +22,26 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="348dp"
         android:fontFamily="@font/bold"
         android:text="Registra tu mascota"
         android:textColor="#1C477F"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/razaTxt"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Raza"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textColor="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalTxt" />
 
     <EditText
         android:id="@+id/condicionTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Condiciones (opcional)"
         android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
         android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -67,12 +52,12 @@
         android:id="@+id/nacimientoTxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Fecha de nacimiento (opcional)"
         android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
         android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
 
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,11 +65,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/razaTxt" />
 
+    <EditText
+        android:id="@+id/animalTxt"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="@font/book"
+        android:hint="Animal"
+        android:inputType="textPersonName"
+        android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edadTxt" />
+
+    <EditText
+        android:id="@+id/edadTxt"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:fontFamily="@font/book"
+        android:hint="Edad"
+        android:inputType="textPersonName"
+        android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petnameTxt" />
+
+    <EditText
+        android:id="@+id/petnameTxt"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/book"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/razaTxt"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Raza"
+        android:inputType="textPersonName"
+        android:textColor="#1C477F"
+        android:textColorHint="#1C477F"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalTxt" />
+
     <Button
         android:id="@+id/registrarBtn"
         android:layout_width="166dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button"
         android:fontFamily="@font/book"
         android:hint="Registrar"
@@ -96,54 +148,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/condicionTxt" />
 
-    <EditText
-        android:id="@+id/animalTxt"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:ems="10"
-        android:fontFamily="@font/book"
-        android:hint="Animal"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textColor="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edadTxt" />
-
-    <EditText
-        android:id="@+id/petnameTxt"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:ems="10"
-        android:fontFamily="@font/book"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textColor="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <EditText
-        android:id="@+id/edadTxt"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:fontFamily="@font/book"
-        android:hint="Edad"
-        android:inputType="textPersonName"
-        android:textColorHint="#1C477F"
-        android:textColor="#1C477F"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/petnameTxt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
