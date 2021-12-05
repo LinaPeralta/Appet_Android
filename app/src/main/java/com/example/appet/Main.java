@@ -75,6 +75,7 @@ public class Main extends AppCompatActivity {
             startActivity(addPet);
         });
 
+
         logOutBtn.setOnClickListener((v)->{
             auth.signOut();
             goToLogin();

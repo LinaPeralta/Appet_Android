@@ -3,7 +3,11 @@ package com.example.appet;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,10 +18,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
+
 public class PetInfo extends AppCompatActivity {
 
     private TextView petName, type, breed, birth, condition;
     private FirebaseDatabase db;
+    private Button regresarBtn;
+    private String userID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,26 +38,53 @@ public class PetInfo extends AppCompatActivity {
         breed = findViewById(R.id.breed);
         birth = findViewById(R.id.birth);
         condition = findViewById(R.id.condition);
+        regresarBtn = findViewById(R.id.regresarBtn);
 
         //Firebase
         db = FirebaseDatabase.getInstance();
 
         getInfo();
 
+        regresarBtn.setOnClickListener((v)->{
+            Intent main = new Intent(this, Main.class);
+            startActivity(main);
+        });
+
+
     }
 
     private void getInfo(){
-        DatabaseReference dbRef = db.getReference().child("pets").push();
 
-        dbRef.addValueEventListener(new ValueEventListener() {
+        SharedPreferences data = getSharedPreferences("data", Context.MODE_PRIVATE);
+        userID = data.getString("userID", "null");
+
+        String petID = getIntent().getStringExtra("petID");
+
+        DatabaseReference ref = db.getReference("users/" +userID+ "/pets");
+
+        ref.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot pets) {
                 petName.setText(" ");
+                type.setText(" ");
+                breed.setText(" ");
+                birth.setText(" ");
+                condition.setText(" ");
+
                 for (DataSnapshot user : pets.getChildren()) {
 
                     Pets pet = user.getValue(Pets.class);
-                    petName.append(pet.getName());
+
+                    if(petID.equals(pet.getId())){
+
+                        petName.setText(pet.getName());
+                        type.setText(pet.getAnimal());
+                        breed.setText(pet.getBreed());
+                        birth.setText(pet.getDatebirth());
+                        condition.setText(pet.getConditions());
+                    }
+
 
                 }
             }
@@ -60,4 +96,5 @@ public class PetInfo extends AppCompatActivity {
 
         });
     }
+
 }

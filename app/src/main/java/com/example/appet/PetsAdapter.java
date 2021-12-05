@@ -1,6 +1,9 @@
 package com.example.appet;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +36,16 @@ public class PetsAdapter extends ArrayAdapter {
 
         nombreRow.setText(pet.getName());
 
+
+        editarBtn.setOnClickListener((v)->{
+            Intent info = new Intent(this.getContext(), PetInfo.class);
+            info.putExtra("petID",pet.getId());
+            this.getContext().startActivity(info);
+
+        });
+
         return convertView;
     }
+
+
 }

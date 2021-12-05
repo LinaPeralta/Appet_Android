@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/editarBtn"
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
         android:backgroundTint="#7399BD"
