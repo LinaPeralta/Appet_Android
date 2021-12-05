@@ -68,6 +68,9 @@ public class ProductInfo extends AppCompatActivity {
                 DatabaseReference productRef = db.getReference("users/" + userID + "/products");
                 DatabaseReference newProRef = productRef.push();
 
+
+                Toast.makeText(this, "" + measurement, Toast.LENGTH_SHORT).show();
+
                 //Create product and add to database
                 Product product = new Product(amount, use, daysCalculated, productName.getText().toString(),
                         measurement, newProRef.getKey(), finalDate, " ", true);
@@ -89,21 +92,25 @@ public class ProductInfo extends AppCompatActivity {
 
     private void checkBoxes(){
         //Depending on which box is checked, set measurement
-        if (gramsCheck.isChecked()){
-            unitsCheck.setVisibility(View.GONE);
-            measurement = "gramos";
-        }
+        gramsCheck.setOnCheckedChangeListener((c, b)->{
+            if (gramsCheck.isChecked()){
+                unitsCheck.setVisibility(View.GONE);
+                measurement = "gramos";
+            } else {unitsCheck.setVisibility(View.VISIBLE);}
+        });
 
-        if (unitsCheck.isChecked()){
-            gramsCheck.setVisibility(View.GONE);
-            measurement = "unidades";
-        }
+        unitsCheck.setOnCheckedChangeListener((c,b)->{
+            if (unitsCheck.isChecked()){
+                gramsCheck.setVisibility(View.GONE);
+                measurement = "unidades";
+            } else {gramsCheck.setVisibility(View.VISIBLE);}
+        });
     }
 
     private void getDate(){
         //Get date information for when added
         date = new Date();
-        formatter = new SimpleDateFormat("MM/dd/yyyy");
+        formatter = new SimpleDateFormat("MM/d/yyyy");
         finalDate = formatter.format(date);
     }
 
